@@ -1,0 +1,7 @@
+.method-payment input[type='radio'] {
+  display: block;
+  accent-color: #cb1c22;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

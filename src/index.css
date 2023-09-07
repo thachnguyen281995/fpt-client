@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.active-promo {
+  @apply border rounded-full outline-none;
+}
+.text-promo {
+  @apply duration-150 text-start text-[12px] text-[#555] font-sans;
+}
+
+@layer components {
+  .header__search-input {
+    background: white;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+    min-width: 500px;
+  }
+  .header-action-item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .btn {
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .border-underline {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .border-top {
+    border-top: 1px solid #f5f5f7;
+  }
+  .active {
+    background-color: #111214;
+    transition: all 0.1s linear;
+  }
+  .category-item {
+    border: 1px solid transparent;
+  }
+  .category-item:hover {
+    border: 1px solid #ededed;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 5px;
+  }
+  .category-item:hover .image-category {
+    transition: all 0.2s linear;
+    transform: scale(1.1);
+  }
+  .border-right {
+    border-right: 1px solid #e5e5e5;
+  }
+  .item-news {
+    display: flex;
+    gap: 0 15px;
+    flex-shrink: 0;
+  }
+  /* Card Product */
+  .wishlist {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .border-circle {
+    flex: 0 0 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+}

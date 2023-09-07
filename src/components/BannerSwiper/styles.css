@@ -1,0 +1,161 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-images-slider-thumbs {
+  background-color: white;
+  padding: 9px 5px 0;
+  border-bottom: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  height: auto;
+}
+.product-images-slider-thumbs .swiper-slide {
+  border-radius: 0;
+  border: none;
+}
+.product-images-slider-thumbs .swiper-slide-thumb-active {
+  font-weight: 500;
+  border-bottom: 2px solid #cd1817;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #a7a7b1;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 6px;
+  outline: 0;
+  color: #6c757d;
+  opacity: 0.75;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+}
+.swiper-button-disabled {
+  display: none;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 120%;
+  font-weight: bold;
+  position: absolute;
+  left: 48%;
+  top: 47%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.box-container {
+  padding: 5px 5px 0px 5px;
+  border-radius: 6px;
+  width: 100%;
+  margin: 0 auto;
+}
+.banner-left {
+  width: calc(100% - 390px);
+}
+.banner-right {
+  width: 385px;
+}
+.title-active {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.box-right-ads-sl {
+  margin-bottom: 5px;
+}
+.box-right-ads .box-right-ads-sl img {
+  border-radius: 4px;
+  object-fit: cover;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+.news-item:hover .picture {
+  border-color: #cb1c22;
+}
+.news-item1:hover .picture1 {
+  border-color: #cb1c22;
+}
+.news-item .picture {
+  display: inline-flex;
+  border: 1px solid #dee2e6;
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 6px;
+  transition: all 0.1s linear;
+  width: 78px;
+}
+.news-item1 .picture1 {
+  display: inline-flex;
+  border: 1px solid #dee2e6;
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 6px;
+  transition: all 0.1s linear;
+  width: 78px;
+}
+/* ToolTip */
+.css-ja5taz-MuiTooltip-tooltip {
+  background-color: white !important;
+}
+.MuiTooltip-popper[data-popper-placement*='left'] .css-1k51tf5-MuiTooltip-tooltip {
+  background-color: white !important;
+  border: solid 1px #ccc;
+  max-width: 230px;
+}
+.css-kudwh-MuiTooltip-arrow::before {
+  background-color: white !important;
+  border: solid 1px #ccc;
+}
+.box-tooltip img {
+  max-width: 250px;
+  max-height: 160px;
+  object-fit: cover;
+}

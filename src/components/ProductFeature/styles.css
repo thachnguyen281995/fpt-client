@@ -1,0 +1,59 @@
+#app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+
+  .mySwiperFeature {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 8px;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in, opacity 0.7s cubic-bezier(0.15, 0, 0.2, 1) 0.1s;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    transition: transform 0.2s ease-in, opacity 0.7s cubic-bezier(0.15, 0, 0.2, 1) 0.1s;
+    transform: scale(0.8);
+    opacity: 0;
+    color: white;
+  }
+  .swiper-button-next:hover:not([disabled]),
+  .swiper-button-prev:hover:not([disabled]) {
+    transition-duration: 0.5s;
+    transform: scale(1);
+    opacity: 1;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  

@@ -1,0 +1,132 @@
+.cards{
+  display: flex;
+  margin-left:-20px;
+}
+.product-card{
+  padding:10px;
+  background-color:white;
+  border-radius: 6px;
+  margin-left:20px;
+  transition: all .2s linear;
+}
+.product-card:hover{
+  border: solid 1px #dee2e6;
+  box-shadow: 0 0 2px 0 #dee2e6;
+  border-radius: 6px;
+  transition: all .2s linear;
+
+}
+.product-card:hover .cdt-product__btn{
+  visibility: visible;
+  transition: all .2s linear;
+  opacity: 1;
+}
+.product-wrapper{
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product-card__content{
+  display: flex;
+  flex-direction: column;
+  height:calc(100% - 160px)
+}
+.product-card__top{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.product-title{
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  margin:10px 0;
+}
+.product-card-bottom{
+  margin-top: auto;
+  flex-shrink: 0;
+}
+.product-mmr-box{
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+.price .progress{
+  flex-basis: 130px;
+  width: 130px;
+  height:28px;
+  line-height: 28px;
+  background:#ef8573;
+  border-radius: 16px;
+  color:white;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar{
+  background:#cb1c22;
+  top:0;
+  bottom: 0;
+  position:absolute;
+  z-index: -1;
+  width: 68%;
+}
+.product-card__config{
+  margin-top: auto;
+  padding:9px 10px;
+}
+.product-card__config .product-card__lazyload{
+  display: flex;
+  gap: 0 4px;
+}
+.cdt-product__btn{
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  visibility: hidden;
+}
+.btn-main{
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #cb1c22;
+  padding: 10px;
+  max-width: 160px;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .1s linear;
+}
+.btn-main:hover{
+  background-color: #ae1427;
+}
+.btn-sub{
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #99a2aa;
+  padding: 10px;
+  max-width: 100px;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .1s linear;
+}
+.btn-sub:hover{
+  background-color: #6c757d;
+}
+
