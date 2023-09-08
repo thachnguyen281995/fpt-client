@@ -19,16 +19,16 @@ const BlogSingle = () => {
   return (
     <>
       <div className="bg-blogsingle">
-        <div className="container grid grid-cols-12 gap-4 mx-auto p-5">
-          <div className="col-span-4 hidden lg:block">
+        <div className="container grid grid-cols-12 gap-4 p-5 mx-auto">
+          <div className="hidden col-span-4 lg:block">
             <div className="bg-white rounded-md py-[10px] px-[15px] mb-4 shadow-sm">
               <div className="border-b-[1px]">
-                <h3 className="text-primary font-medium font-sans pb-2 text-lg">Xem nhiều</h3>
+                <h3 className="pb-2 font-sans text-lg font-medium text-primary">Xem nhiều</h3>
               </div>
               <div className="mt-4">
-                <ul className="text-sm flex gap-y-4 flex-col">
+                <ul className="flex flex-col text-sm gap-y-4">
                   <li className="flex items-center">
-                    <span className="w-10 h-10 bg-redcb rounded-full text-white mr-2 border-circle">1</span>
+                    <span className="w-10 h-10 mr-2 text-white rounded-full bg-redcb border-circle">1</span>
                     <Link className="line-clamp-2">
                       Tổng hợp 5 cách tra cứu điểm thi tốt nghiệp THPT Quốc gia 2023 cực nhanh và chính xác
                     </Link>
@@ -67,7 +67,7 @@ const BlogSingle = () => {
           <div className="col-span-12 lg:col-span-8">
             <div className="bg-white rounded-md py-[10px] px-[15px] mb-4 shadow-sm">
               <div className="blogsingle-top font-merri">
-                <h1 className="text-3xl mb-4 font-semibold">{blogState?.title}</h1>
+                <h1 className="mb-4 text-3xl font-semibold">{blogState?.title}</h1>
                 <p className="text-[#222] leading-8 py-2">{blogState?.description[0]}</p>
                 <p className="text-[#222] leading-8 py-2">{blogState?.description[1]}</p>
                 <div className="mt-4">
@@ -77,7 +77,7 @@ const BlogSingle = () => {
                 <p className="text-[#222] leading-8 py-2">{blogState?.description[2]}</p>
                 <p className="text-[#222] leading-8 py-2">{blogState?.description[3]}</p>
                 {blogState?.description[4] === true ? (
-                  <p className="text-red-500 leading-8 py-2">neu co thi hien</p>
+                  <p className="py-2 leading-8 text-red-500">neu co thi hien</p>
                 ) : null}
                 {blogState?.images.length > 1 && (
                   <div className="wrapper">
@@ -90,7 +90,7 @@ const BlogSingle = () => {
                         <ul>
                           {blogState?.listDesc[0].subDesc &&
                             blogState?.listDesc[0].subDesc.map((item, index) => (
-                              <li key={index} className="list-disc ml-4 mb-4">
+                              <li key={index} className="mb-4 ml-4 list-disc">
                                 {item}
                               </li>
                             ))}
@@ -106,8 +106,8 @@ const BlogSingle = () => {
                 )}
               </div>
             </div>
-            <div className="footer-content flex justify-start">
-              <div className="border p-2 rounded-md bg-white">
+            <div className="flex justify-start footer-content">
+              <div className="p-2 bg-white border rounded-md">
                 <Link to="/blog">
                   <BsArrowLeft size={25} />
                 </Link>

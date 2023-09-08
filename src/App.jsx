@@ -2,7 +2,6 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import HotSale from './components/HotSale/ProductHotSale';
 import OurStore from './pages/OurStore/OurStore';
@@ -41,7 +40,6 @@ function App() {
             }
           />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="contact" element={<Contact />} />
           <Route path="product" element={<OurStore />} />
           <Route path="product/:id" element={<SingleProduct />} />
           <Route path="hotsale" element={<HotSale />} />
