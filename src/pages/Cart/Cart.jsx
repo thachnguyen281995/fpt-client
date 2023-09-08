@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import { createCashOrder, deleteCartProduct, getCart } from '../../features/user/userSlice';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import EmptyCart from '../../components/emptyCart';
+import EmptyCart from '../../components/EmptyCart';
 const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
@@ -87,7 +87,7 @@ const Cart = () => {
           <div className="grid grid-cols-12 py-5 gap-x-5">
             {/* Left */}
             <div className="col-span-12 lg:col-span-5">
-              <h3 className="mb-4 font-sans uppercase pl-2 lg:pl-0">Thông tin giao hàng</h3>
+              <h3 className="pl-2 mb-4 font-sans uppercase lg:pl-0">Thông tin giao hàng</h3>
               <div className="p-4 bg-white rounded-md wrapper-info">
                 <div className="grid grid-cols- gap-x-3">
                   <div className="flex flex-col">
@@ -143,8 +143,8 @@ const Cart = () => {
               </div>
             </div>
             {/* Right */}
-            <div className="col-span-12 lg:col-span-7 pt-2">
-              <h3 className="mb-4 font-sans uppercase pl-2 lg:pl-0">Đơn hàng</h3>
+            <div className="col-span-12 pt-2 lg:col-span-7">
+              <h3 className="pl-2 mb-4 font-sans uppercase lg:pl-0">Đơn hàng</h3>
               <div className="bg-white rounded-md wrapper-info">
                 {stateCart?.map((item) => {
                   return (
