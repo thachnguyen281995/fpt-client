@@ -5,8 +5,7 @@ import { getCart, getMyOrders } from '../features/user/userSlice';
 import { Divider,Spin } from 'antd';
 import BreadCrumb from './BreadCrumb';
 import Meta from './Meta';
-import { Navigate } from 'react-router-dom';
-import EmptyCart from './emptyCart';
+import EmptyCart from './EmptyCart';
 const Order = () => {
   const orderState = useSelector((state) => state.auth.getMyOrders);
   const stateCart = useSelector((state) => state.auth.getCart);
@@ -24,7 +23,7 @@ const Order = () => {
         <div className="grid grid-cols-12 py-5 gap-x-5">
           {/* Left */}
           <div className="col-span-12 lg:col-span-5">
-            <div className="p-4 bg-white rounded-md wrapper-info flex justify-between">
+            <div className="flex justify-between p-4 bg-white rounded-md wrapper-info">
               <div className="info-left">
                 <p className="text-textInfo">{orderState?.shippingInfo.fullName}</p>
                 <p className="text-textInfo">{orderState?.shippingInfo.address}</p>
@@ -38,17 +37,17 @@ const Order = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-7 mt-5 lg:mt-0">
+          <div className="col-span-12 mt-5 lg:col-span-7 lg:mt-0">
             <div className="bg-white rounded-md wrapper-info">
               {stateCart?.map((item) => {
                 return (
-                  <div className="flex items-center px-4 cart-item justify-between" key={item._id}>
+                  <div className="flex items-center justify-between px-4 cart-item" key={item._id}>
                     <div className="p-2">
                       <img src={item.productId.images[0].url} alt="" className="object-contain w-20 h-20" />
                     </div>
                       <div className="max-w-xs font-sans text-base font-medium line-clamp-1">{item?.productId?.title}</div>
   
-                      <p className="font-medium text-base">
+                      <p className="text-base font-medium">
                         {item.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                       </p>
                   </div>
@@ -60,7 +59,7 @@ const Order = () => {
                 <div className="flex justify-between px-4">
                   <h3 className="font-sans text-base text-grayf5">Tạm tính</h3>
                   <div className="flex flex-col">
-                    <p className="font-medium text-base">
+                    <p className="text-base font-medium">
                       {orderState?.totalPrice?.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                     </p>
                     <div className="flex items-center">
@@ -74,7 +73,7 @@ const Order = () => {
               <div className="pb-4 totalPrice">
                 <div className="flex justify-between px-4">
                   <h3 className="font-sans text-base text-grayf5">Tổng tiền</h3>
-                  <p className="font-medium text-base">
+                  <p className="text-base font-medium">
                     {orderState?.totalPriceAfterDicount?.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                   </p>
                 </div>
