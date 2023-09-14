@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import BreadCrumb from '../../components/BreadCrumb';
-import Meta from '../../components/Meta';
-import QuantityButton from '../../components/QuantityButton';
 import { BsFillTrash3Fill } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
-import { Divider, Skeleton, Spin } from 'antd';
+import {  useNavigate } from 'react-router-dom';
+import { Divider, Skeleton } from 'antd';
 import './styles.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -17,8 +14,6 @@ const Cart = () => {
   const navigate = useNavigate()
   const [subtotal, setSubTotal] = useState(null);
   const [total, setTotal] = useState(null);
-  const [shippingInfo, setShippingInfo] = useState(null);
-  const [orderItems, setOrderItems] = useState(null);
   const [cartProductState,setCartProductState] = useState([])
   useEffect(() => {
     setTimeout(() => {
